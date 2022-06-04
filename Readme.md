@@ -27,3 +27,6 @@ Create a `"goforblob"` property in your `package.json`:
     "uninstall": "goforblob uninstall"
 }
 ```
+## Example
+
+https://github.com/harnyk/go-npm-example
