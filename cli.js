@@ -61,11 +61,11 @@ const getBinPath = () => {
 
 const getMetadata = () => {
     const pkg = getPackageJson();
-    const binName = pkg.binary.name;
+    const binName = pkg.goforblob.name;
     const version = pkg.version;
     const arch = getArch();
     const platform = getPlatform();
-    const url = pkg.binary.url
+    const url = pkg.goforblob.url
         .replace(/\{version\}/g, version)
         .replace(/\{platform\}/g, platform)
         .replace(/\{arch\}/g, arch)
@@ -118,7 +118,7 @@ const main = async () => {
     } else if (command === 'uninstall') {
         uninstall();
     } else {
-        console.log(`Usage: node binary.js [install|uninstall]`);
+        console.log(`Usage: goforblob [install|uninstall]`);
     }
 };
 
